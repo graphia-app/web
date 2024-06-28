@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
 <script src="coi-serviceworker.js"></script>
+<link rel="stylesheet" href="loader.css">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -44,17 +45,13 @@
 
             try {
                 showUi(spinner);
-                status.classList.add('loader');
+                status.innerHTML = '<div class="loader"></div>';
 
                 const instance = await qtLoad({
                     qt: {
                         onLoaded: () => showUi(screen),
                         onExit: exitData =>
                         {
-                            if(status.classList.contains('loader')) {
-                                status.classList.remove('loader');
-                            }
-
                             status.innerHTML = 'Application exit';
                             status.innerHTML +=
                                 exitData.code !== undefined ? ` with code ${exitData.code}` : '';
