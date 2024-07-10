@@ -49,6 +49,7 @@
 
                 const instance = await qtLoad({
                     qt: {
+environment: {"CORS_PROXY": "https://corsproxy.graphia.app"},
                         onLoaded: () => showUi(screen),
                         onExit: exitData =>
                         {

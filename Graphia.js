@@ -497,7 +497,7 @@ function createWasm() {
 }
 
 var ASM_CONSTS = {
- 11895964: () => {
+ 11896060: () => {
   let userAgent = navigator.userAgent;
   let browser = "Unknown";
   if (/Chrome/.test(userAgent) && !/Chromium/.test(userAgent)) browser = "Chrome"; else if (/Edg/.test(userAgent)) browser = "Edge"; else if (/Firefox/.test(userAgent)) browser = "Firefox"; else if (/Safari/.test(userAgent)) browser = "Safari"; else if (/Trident/.test(userAgent)) browser = "IE";
@@ -12980,9 +12980,9 @@ var ___cxa_can_catch = (a0, a1, a2) => (___cxa_can_catch = wasmExports["uj"])(a0
 
 var ___cxa_is_pointer_type = a0 => (___cxa_is_pointer_type = wasmExports["vj"])(a0);
 
-var ___start_em_js = Module["___start_em_js"] = 11896353;
+var ___start_em_js = Module["___start_em_js"] = 11896449;
 
-var ___stop_em_js = Module["___stop_em_js"] = 11897443;
+var ___stop_em_js = Module["___stop_em_js"] = 11897539;
 
 function invoke_viiii(index, a1, a2, a3, a4) {
  var sp = stackSave();
@@ -13724,6 +13724,8 @@ function applySignatureConversions(wasmExports) {
 Module["callMain"] = callMain;
 
 Module["wasmMemory"] = wasmMemory;
+
+Module["ENV"] = ENV;
 
 Module["keepRuntimeAlive"] = keepRuntimeAlive;
 
